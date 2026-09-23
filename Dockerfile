@@ -6,9 +6,9 @@ COPY entrypoint.sh /entrypoint.sh
 COPY apply_config.py /app/apply_config.py
 
 # Testing only
-COPY gemini.py /app/gemini.py 
+COPY gemini.py /app/gemini.py
 # Testing only
-COPY shopease_single_shot_prompts-10000.csv /app/shopease_single_shot_prompts-10000.csv # Comment this line on PROD - used for Testing
+COPY shopease_single_shot_prompts-10000.csv /app/shopease_single_shot_prompts-10000.csv
 
 RUN chmod +x /entrypoint.sh
 WORKDIR /app
