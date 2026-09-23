@@ -1,5 +1,6 @@
 FROM python:3.13-slim
-RUN pip install docoreai google-genai
+RUN pip install docoreai 
+RUN pip install google-genai
 ENV DOCOREAI_ENV_PATH=/app/data
 COPY entrypoint.sh /entrypoint.sh
 COPY apply_config.py /app/apply_config.py
