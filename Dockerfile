@@ -1,4 +1,5 @@
 FROM python:3.13-slim
+RUN apt-get update && apt-get install -y libgl1 libglib2.0-0 --no-install-recommends && rm -rf /var/lib/apt/lists/*
 RUN pip install docoreai 
 RUN pip install google-genai
 ENV DOCOREAI_ENV_PATH=/app/data
