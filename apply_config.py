@@ -1,7 +1,7 @@
 import csv, os
 from pathlib import Path
-from docore_ai.config.db import get_connection
-
+from docore_ai.config.db import get_connection, init_db
+init_db()
 config_path = Path(os.environ.get("DOCOREAI_ENV_PATH", "/app/data")) / "client_config.csv"
 
 if not config_path.exists():
