@@ -1,6 +1,6 @@
 FROM python:3.13-slim
 
-RUN pip install docoreai==2.3.5
+RUN pip install docoreai==2.3.6
 RUN pip install google-genai
 
 ENV DOCOREAI_ENV_PATH=/app/data
