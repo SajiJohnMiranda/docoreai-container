@@ -1,5 +1,11 @@
 FROM python:3.13-slim
 
+RUN apt-get update && apt-get install -y \
+    libegl1 \
+    libfontconfig1 \
+    --no-install-recommends \
+ && rm -rf /var/lib/apt/lists/*
+
 RUN pip install docoreai==2.3.6
 RUN pip install google-genai
 
