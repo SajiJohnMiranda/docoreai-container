@@ -12,7 +12,7 @@ RUN apt-get update && apt-get install -y \
     --no-install-recommends \
  && rm -rf /var/lib/apt/lists/*
 
-RUN pip install docoreai==2.3.4
+RUN pip install docoreai==2.3.5
 RUN pip install google-genai
 
 ENV DOCOREAI_ENV_PATH=/app/data
