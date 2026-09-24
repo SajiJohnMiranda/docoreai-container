@@ -10,6 +10,8 @@ ENV DOCOREAI_ENV_PATH=/app/data
 COPY entrypoint.sh /entrypoint.sh
 COPY apply_config.py /app/apply_config.py
 
+# Testing Only - Goes to volumes in Prod
+COPY client_config.csv /app/data/client_config.csv
 # Testing only
 COPY gemini.py /app/gemini.py
 # Testing only
