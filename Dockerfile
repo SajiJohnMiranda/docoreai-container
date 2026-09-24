@@ -1,8 +1,10 @@
 FROM python:3.13-slim
 
 RUN apt-get update && apt-get install -y \
+    libgl1 \
     libegl1 \
     libfontconfig1 \
+    libgomp1 \
     --no-install-recommends \
  && rm -rf /var/lib/apt/lists/*
 
