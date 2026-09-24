@@ -20,7 +20,7 @@ with open(config_path) as f:
 
         # 1. Validate the key exists in DB first
         existing = conn.execute("""
-            SELECT value_type FROM phase2_config 
+            SELECT value_type FROM wp_docoreai_phase2_config
             WHERE category=? AND config_key=?
         """, (category, key)).fetchone()
 
