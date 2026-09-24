@@ -46,7 +46,7 @@ with open(config_path) as f:
 
         # 3. Apply
         conn.execute("""
-            UPDATE phase2_config 
+            UPDATE wp_docoreai_phase2_config
             SET config_value=?
             WHERE category=? AND config_key=?
         """, (value, category, key))
