@@ -3,6 +3,7 @@ FROM python:3.13-slim
 RUN apt-get update && apt-get install -y \
     libgl1 \
     libegl1 \
+    libfontconfig1 \
     libglib2.0-0 \
     libxkbcommon0 \
     libdbus-1-3 \
